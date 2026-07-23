@@ -1,0 +1,79 @@
+{
+  "dataset_size": 11991,
+  "attrition_rate": 0.166,
+  "tenure_outlier_bounds": [
+    1.5,
+    5.5
+  ],
+  "models": {
+    "Logistic Regression": {
+      "accuracy": 0.8195,
+      "precision_leave": 0.4409,
+      "recall_leave": 0.2611,
+      "f1_leave": 0.328,
+      "weighted_f1": 0.8,
+      "confusion_matrix": [
+        [
+          2165,
+          156
+        ],
+        [
+          348,
+          123
+        ]
+      ],
+      "cm_plot": "logistic_regression_cm.png"
+    },
+    "Decision Tree": {
+      "accuracy": 0.9864,
+      "precision_leave": 0.9822,
+      "recall_leave": 0.9363,
+      "f1_leave": 0.9587,
+      "weighted_f1": 0.9863,
+      "confusion_matrix": [
+        [
+          2313,
+          8
+        ],
+        [
+          30,
+          441
+        ]
+      ],
+      "cm_plot": "decision_tree_cm.png"
+    },
+    "Random Forest": {
+      "accuracy": 0.986,
+      "precision_leave": 0.9909,
+      "recall_leave": 0.9257,
+      "f1_leave": 0.9572,
+      "weighted_f1": 0.9858,
+      "confusion_matrix": [
+        [
+          2317,
+          4
+        ],
+        [
+          35,
+          436
+        ]
+      ],
+      "cm_plot": "random_forest_cm.png"
+    },
+    "_best_model": "Decision Tree",
+    "_feature_importance": {
+      "satisfaction_level": 0.5393,
+      "tenure": 0.1606,
+      "last_evaluation": 0.1348,
+      "number_project": 0.1152,
+      "average_monthly_hours": 0.0494,
+      "department_product_mng": 0.0006,
+      "department_technical": 0.0001,
+      "salary": 0.0,
+      "promotion_last_5years": 0.0,
+      "work_accident": 0.0
+    },
+    "_n_train": 8375,
+    "_n_test": 2792
+  }
+}

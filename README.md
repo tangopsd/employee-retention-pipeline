@@ -1,8 +1,8 @@
 # Predictive Employee Retention Pipeline
 
 A binary classification pipeline that predicts which employees are likely to leave a company,
-built on 15,000 HR records. Compares three model families and finds that tree-based models
-dramatically outperform Logistic Regression for this problem — catching **94%+ of at-risk
+built on 15,000 HR records. Compares three model families and finds that tree based models
+outperform Logistic Regression for this problem, catching **94%+ of at-risk
 employees** versus 26% for the linear baseline.
 
 **[→ View the interactive dashboard](dashboard/index.html)**
@@ -11,7 +11,7 @@ employees** versus 26% for the linear baseline.
 
 Employee attrition is expensive and often preventable if flagged early. Using satisfaction
 surveys, workload, tenure, and pay data, this project builds a model that flags employees at
-risk of leaving — and more importantly, surfaces *which* factors actually drive that risk.
+risk of leaving, and more importantly, surfaces *which* factors actually drive that risk.
 
 ## Dataset
 
@@ -26,7 +26,7 @@ salary band, and the target: whether the employee left).
 2. **Explore** — visualize attrition against satisfaction, workload, tenure, salary, and
    department
 3. **Model** — train and compare Logistic Regression, Decision Tree, and Random Forest
-4. **Evaluate** — prioritize recall on the "left" class, since missing an at-risk employee is
+4. **Evaluate** — prioritize recall on the "left" class, since missing an at risk employee is
    the costlier error for a retention use case
 
 ## Results
@@ -40,12 +40,6 @@ salary band, and the target: whether the employee left).
 **Top predictive features (Decision Tree):** satisfaction level (54%), tenure (16%), last
 evaluation score (13%), number of projects (12%), average monthly hours (5%). Department and
 salary barely matter once these are accounted for.
-
-## Bug found & fixed
-
-The original version of this notebook called `pd.get_dummies(df, drop_first="False")` — passing
-the **string** `"False"` instead of the boolean. Since non-empty strings are truthy in Python,
-this silently behaved like `drop_first=True`. Fixed to the real boolean in this version.
 
 ## Repo structure
 

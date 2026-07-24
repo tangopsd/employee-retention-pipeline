@@ -59,14 +59,7 @@ salary barely matter once these are accounted for.
 └── README.md
 ```
 
-## Running it
-
-```bash
-pip install -r requirements.txt
-python src/pipeline.py          # regenerates dashboard/results.json + dashboard/assets/*.png
-```
-
-Or open `notebooks/Predictive_Employee_Retention_Pipeline.ipynb` directly to follow the full
+open `notebooks/Predictive_Employee_Retention_Pipeline.ipynb` directly to follow the full
 walkthrough with explanations.
 
 ## Limitations & next steps

@@ -1,7 +1,7 @@
 # Predictive Employee Retention Pipeline
 
 A binary classification pipeline that predicts which employees are likely to leave a company,
-built on 15,000 HR records. Compares three model families and finds that tree based models
+built on 15,000 HR records. The project compares three model families and finds that tree based models
 outperform Logistic Regression for this problem, catching **94%+ of at-risk
 employees** versus 26% for the linear baseline.
 
@@ -10,23 +10,23 @@ employees** versus 26% for the linear baseline.
 ## Problem
 
 Employee attrition is expensive and often preventable if flagged early. Using satisfaction
-surveys, workload, tenure, and pay data, this project builds a model that flags employees at
+surveys, workload, tenure, and pay data, this project builds a model that flags employees at the
 risk of leaving, and more importantly, surfaces *which* factors actually drive that risk.
 
 ## Dataset
 
-`data/HR_comma_sep.csv` — 14,999 rows, 10 columns (satisfaction level, last evaluation score,
+`data/HR_comma_sep.csv`- 14,999 rows, 10 columns (satisfaction level, last evaluation score,
 number of projects, average monthly hours, tenure, work accidents, promotions, department,
 salary band, and the target: whether the employee left).
 
 ## Approach
 
-1. **Clean** — remove duplicates (3,008 exact dupes found), standardize column names, encode
+1. **Clean** the data: removal of duplicates (3,008 exact dupes found), standardize column names, and encoding
    categoricals
-2. **Explore** — visualize attrition against satisfaction, workload, tenure, salary, and
+2. **Explore**: visualize attrition against satisfaction, workload, tenure, salary, and
    department
-3. **Model** — train and compare Logistic Regression, Decision Tree, and Random Forest
-4. **Evaluate** — prioritize recall on the "left" class, since missing an at risk employee is
+3. **Model**: training and comparing Logistic Regression, Decision Tree, and Random Forest
+4. **Evaluate**: prioritizing recall on the "left" class, since missing an at risk employee is
    the costlier error for a retention use case
 
 ## Results
@@ -34,7 +34,7 @@ salary band, and the target: whether the employee left).
 | Model | Accuracy | Precision (left) | Recall (left) | F1 (left) |
 |---|---|---|---|---|
 | Logistic Regression | 81.9% | 44.1% | 26.1% | 32.8% |
-| **Decision Tree** ⭐ | 98.6% | 98.2% | **93.6%** | **95.9%** |
+| **Decision Tree** | 98.6% | 98.2% | **93.6%** | **95.9%** |
 | Random Forest | 98.6% | 99.1% | 92.6% | 95.7% |
 
 **Top predictive features (Decision Tree):** satisfaction level (54%), tenure (16%), last
@@ -64,10 +64,10 @@ walkthrough with explanations.
 
 ## Limitations & next steps
 
-- Observational data — the model finds correlated risk factors, not proven causes
-- Tree-based models risk overfitting to this specific company's dynamics; k-fold cross-validation
+- The data is observational, so the model finds correlated risk factors, not proven causes
+- Tree based models risk overfitting to this specific company's dynamics; k-fold cross-validation
   and `GridSearchCV` tuning would be the next step to confirm the gap holds out of sample
-- A production version would need periodic retraining as pay bands and policy change
+- A production version would need periodic retraining as pay bands and policies change
 
 ## Stack
 

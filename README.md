@@ -10,7 +10,7 @@ employees** versus 26% for the linear baseline.
 ## Problem
 
 Employee attrition is expensive and often preventable if flagged early. Using satisfaction
-surveys, workload, tenure, and pay data, this project builds a model that flags employees at the
+surveys, workload, tenure, and pay data, this project builds a model that flags employees at
 risk of leaving, and more importantly, surfaces *which* factors actually drive that risk.
 
 ## Dataset
@@ -21,12 +21,12 @@ salary band, and the target: whether the employee left).
 
 ## Approach
 
-1. **Clean** the data: removal of duplicates (3,008 exact dupes found), standardize column names, and encoding
+1. **Clean** the data: remove duplicates (3,008 exact dupes found), standardize column names, and encode
    categoricals
 2. **Explore**: visualize attrition against satisfaction, workload, tenure, salary, and
    department
-3. **Model**: training and comparing Logistic Regression, Decision Tree, and Random Forest
-4. **Evaluate**: prioritizing recall on the "left" class, since missing an at risk employee is
+3. **Model**: train and compare Logistic Regression, Decision Tree, and Random Forest
+4. **Evaluate**: prioritize recall on the "left" class, since missing an at-risk employee is
    the costlier error for a retention use case
 
 ## Results

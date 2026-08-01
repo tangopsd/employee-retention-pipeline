@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Employee Retention Signal — Dashboard</title>
+<title>Employee Retention Signal: Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -229,7 +229,7 @@
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">Workforce Analytics · Predictive Retention Model</div>
-    <h1 class="title">Which employees are about to leave — and why?</h1>
+    <h1 class="title">Which employees are about to leave, and why?</h1>
     <p class="dek">A classification pipeline trained on 11,991 employee records to flag attrition risk before it happens, comparing three model families to find the one that actually catches at-risk employees.</p>
 
     <div class="statgrid">
@@ -256,12 +256,12 @@
 <section id="overview">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">01</span><h2>Data exploration</h2></div>
-    <p class="sec-sub">Before modeling, the data tells its own story — overworked mid-tenure employees with low satisfaction are the clearest churn signal in the dataset.</p>
+    <p class="sec-sub">Before modeling, the data tells its own story: overworked mid-tenure employees with low satisfaction are the clearest churn signal in the dataset.</p>
 
     <div class="grid3">
       <div class="card">
         <img src="assets/attrition_split.png" alt="Attrition split pie chart">
-        <div class="cap"><b>Class imbalance:</b> ~1 in 6 employees left — the minority class the model needs to catch.</div>
+        <div class="cap"><b>Class imbalance:</b> ~1 in 6 employees left: the minority class the model needs to catch.</div>
       </div>
       <div class="card">
         <img src="assets/satisfaction_vs_hours.png" alt="Satisfaction vs monthly hours scatterplot">
@@ -281,7 +281,7 @@
       </div>
       <div class="card">
         <img src="assets/department_breakdown.png" alt="Department breakdown of attrition">
-        <div class="cap"><b>Not department-driven:</b> attrition share is fairly even across departments — this isn't a team-specific problem.</div>
+        <div class="cap"><b>Not department-driven:</b> attrition share is fairly even across departments, telling us this isn't a team-specific problem.</div>
       </div>
     </div>
 
@@ -339,15 +339,15 @@
     <div class="cm-grid">
       <div class="card">
         <img src="assets/logistic_regression_cm.png" alt="Logistic Regression confusion matrix">
-        <div class="cap">Logistic Regression — misses 348 of 471 leavers.</div>
+        <div class="cap">Logistic Regression: misses 348 of 471 leavers.</div>
       </div>
       <div class="card">
         <img src="assets/decision_tree_cm.png" alt="Decision Tree confusion matrix">
-        <div class="cap">Decision Tree — misses only 30 of 471 leavers.</div>
+        <div class="cap">Decision Tree: misses only 30 of 471 leavers.</div>
       </div>
       <div class="card">
         <img src="assets/random_forest_cm.png" alt="Random Forest confusion matrix">
-        <div class="cap">Random Forest — misses 35 of 471 leavers, fewest false alarms.</div>
+        <div class="cap">Random Forest: misses 35 of 471 leavers, fewest false alarms.</div>
       </div>
     </div>
   </div>
@@ -356,13 +356,13 @@
 <section id="findings">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">03</span><h2>What actually drives attrition</h2></div>
-    <p class="sec-sub">Feature importances from the Decision Tree — the model that best separates who stays from who leaves.</p>
+    <p class="sec-sub">Feature importances from the Decision Tree, the model that best separates who stays from who leaves.</p>
 
     <div class="findings">
       <ul class="finding-list">
         <li>
           <span class="pct">53.9%</span>
-          <div><b>Satisfaction level</b><span class="d">By far the dominant signal — more than every other feature combined.</span></div>
+          <div><b>Satisfaction level</b><span class="d">By far the dominant signal, more than every other feature combined.</span></div>
         </li>
         <li>
           <span class="pct">16.1%</span>
@@ -370,7 +370,7 @@
         </li>
         <li>
           <span class="pct">13.5%</span>
-          <div><b>Last evaluation score</b><span class="d">High performers are leaving too — this isn't just a low-performer problem.</span></div>
+          <div><b>Last evaluation score</b><span class="d">High performers are leaving too, this isn't just a low-performer problem.</span></div>
         </li>
         <li>
           <span class="pct">11.5%</span>

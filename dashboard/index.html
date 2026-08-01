@@ -332,10 +332,6 @@
       </tbody>
     </table>
 
-    <div class="bugbox">
-      <b>Bug found &amp; fixed during cleanup:</b> the original notebook called <code>pd.get_dummies(df, drop_first="False")</code> — passing the string <code>"False"</code> instead of the boolean, which silently behaved like <code>drop_first=True</code>. Fixed to <code>drop_first=False</code> in the cleaned pipeline so every department dummy column is retained.
-    </div>
-
     <div class="cm-grid">
       <div class="card">
         <img src="assets/logistic_regression_cm.png" alt="Logistic Regression confusion matrix">

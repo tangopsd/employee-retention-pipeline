@@ -5,7 +5,7 @@ built on 15,000 HR records. The project compares three model families and finds 
 outperform Logistic Regression for this problem, catching **94%+ of at-risk
 employees** versus 26% for the linear baseline.
 
-**[→ View the interactive dashboard](dashboard/index.html)**
+**[→ View the interactive dashboard](https://htmlpreview.github.io/?https://github.com/tangops/employee-retention-pipeline/blob/main/dashboard/index.html)**
 
 ## Problem
 
